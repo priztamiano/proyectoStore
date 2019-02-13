@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  font-size: 22px;
+  color: #560764;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #560764;
+}
+/*HEADER HEADER HEADER*/
+.header {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+    .header a {
+    color: #bb8fa9;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 10px;
+    }
+    .header a:hover {
+    color: #d8cbbb;
+    }   
+    .logo {
+    width: 60px;
+    }
+    .nav {
+    margin-right: 10px;
+    }
+    .search {
+    width: 150px;
+    display: inline;
+    }
+    .btn {
+    width: 5%;
+    height: 5%;
+    display: inline;
+    }
+    .fa-search {
+    color: #b6799d;
+    }
+    .fa-search:hover {
+    color: #d8cbbb;
+    }
+/*HEADER HEADER HEADER*/
+
+/*START START START*/
+#start {
+  background-color: #000;
+  width: 100%;
+  height: auto;  
+}
+
+  #start h1 {
+    text-transform: uppercase;
+    color: #d8cbbb;
+    text-align: center; 
+    line-height: 80px;
+    margin: 0px;
+  }
+/*START START START*/
+
+/*MAIN MAIN MAIN*/
+#main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+    .img img{
+    width: 100%;
+    }
+    .img:hover {
+    opacity: 0.5;
+    }
+/*MAIN MAIN MAIN*/
+
+/*BANNER BANNER BANNER*/
+.banner {
+  background-color: #000;
+  width: 100%;
+  height: 80px;
+}
+  .banner p {
+    text-transform: uppercase;
+    color: #d8cbbb;
+    text-align: center; 
+    line-height: 80px;
+  }
+/*BANNER BANNER BANNER*/
+
+/*FOOTER FOOTER FOOTER*/
+.footer {
+  font-size: smaller;
+  height: auto;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+    .footer a {
+    color: #b6799d;
+    text-decoration: none;
+    }
+    .footer a:hover {
+    color: #d8cbbb;
+    }
+    .social {
+    margin: 10px;
+    }
+    .social i {
+    width: 50px;
+    color: #b6799d;
+    }
+    .social i:hover {
+    color: #d8cbbb;
+    }
+    .contacto {
+    margin: 10px;
+    }
+/*FOOTER FOOTER FOOTER*/
+
+/*BLOG BLOG BLOG*/
+.blogBackground {
+  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?);
+}
+#content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#blog {
+  font-size: smaller;
+  width: 75%;
+  margin-top: 2%;
+  margin-left: 2%;
+  display: flex;
+}
+      .title {
+      font-size: larger;
+      color: #000;
+      }
+      .title::first-letter {
+      font-size: larger;
+      }
+      .post {
+      margin-right: 2%;
+      width: 35%;
+      height: fit-content;
+      overflow: hidden;
+      }
+      #img-blog {
+      width: 100%;
+      }
+  
+#profile {
+   width: 20%;
+   height: fit-content;
+   margin: 2% 2% 0% 2%;
+   padding: 1%;
+   text-align: center;
+   font-size: smaller;
+}
+    #profile ul {
+    list-style: none;
+    }
+    #profile .title {
+    text-transform: uppercase;
+    }
+    .social-profile {
+      display: flex;
+      justify-content: center;
+    }
+
+#latestPosts {
+  width: 90%;
+  font-size: smaller;
+  margin-top: 2%;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+    .card {
+      width: 30%;
+      height: fit-content;
+      margin-bottom: 2%;
+      border: none;
+    }
+    .title-latest {
+      margin-top: 2%;
+      margin-left: 2%;
+      text-transform: uppercase;
+    }
+    
+  /*BLOG BLOG BLOG*/
+   
+
+
+  /*CELL CELL CELL*/
+  @media screen and (max-width: 768px) {
+  /*HEADER*/
+    .header {
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .nav {
+      font-size: 0.8rem;
+      justify-content: space-evenly;
+    }
+    .search, .fa-search {display: none;}
+  
+  /*START*/ 
+   #start h1 {font-size: 1.8rem;}
+  
+  /*FOOTER*/
+   .footer {font-size: 0.9rem;}
+   
+  /*BLOG*/
+   #blog {
+     flex-direction: column-reverse;
+     width: 65%;
+  }
+   .post {width: 100%; height: fit-content;}
+   
+   #profile {
+     width: 30%;
+     height: fit-content;
+     font-size: 0.8rem;
+   }
+   .social-profile {line-height: auto;}
+   .social-profile i {width: 30px;}
+
+   #latestPosts .card-text {display: none;}
+
+   #latestPosts .card-title,
+   .card-text,
+   .card .btn {
+     font-size: 0.8rem;
+    }
+   #latestPosts .card .btn {
+     font-size: 0.6rem;
+     width: auto;
+  }
+
+   #latestPosts .card-body {padding: 3%;}
+ 
+   
+  /*CELL CELL CELL*/
+
+
+  /*TABLET TABLET TABLET
+  @media screen and (max-width: 767.98px) {
+  /*HEADER  
+    .nav {
+      font-size: 0.9rem;
+      justify-content: space-evenly;
+    }
+    .logo {width: 50px;}
+  }
+
+  /*BLOG
+  #blog {
+    flex-direction: column-reverse;
+    width: 65%;
+  }
+  .post {width: 100%; height: fit-content;}
+  #profile {
+    width: 30%;
+    height: fit-content;
+  }
+  /*TABLET TABLET TABLET*/
